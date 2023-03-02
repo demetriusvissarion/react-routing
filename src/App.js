@@ -3,13 +3,13 @@ import {
   // createRoutesFromElements,
   RouterProvider,
   // Route,
-} from "react-router-dom";
-import ErrorPage from "./pages/Error";
+} from 'react-router-dom';
 
-import HomePage from "./pages/Home";
-import ProductDetailPage from "./pages/ProductDetail";
-import ProductsPage from "./pages/Products";
-import RootLayout from "./pages/Root";
+import ErrorPage from './pages/Error';
+import HomePage from './pages/Home';
+import ProductDetailPage from './pages/ProductDetail';
+import ProductsPage from './pages/Products';
+import RootLayout from './pages/Root';
 
 // const routeDefinitions = createRoutesFromElements(
 //   <Route>
@@ -20,15 +20,15 @@ import RootLayout from "./pages/Root";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <HomePage /> },
-      { path: "/products", element: <ProductsPage /> },
-      { path: "/products/:productId", element: <ProductDetailPage /> },
+      { path: '', element: <HomePage /> },
+      { path: 'products', element: <ProductsPage /> },
+      { path: 'products/:productId', element: <ProductDetailPage /> }
     ],
-  },
+  }
 ]);
 
 // const router = createBrowserRouter(routeDefinitions);

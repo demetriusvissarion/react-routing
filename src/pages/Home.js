@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 function HomePage() {
   const navigate = useNavigate();
 
-  // not needed on this page, just used as an example
   function navigateHandler() {
     navigate("/products");
   }
@@ -12,7 +11,7 @@ function HomePage() {
     <>
       <h1>My Home Page</h1>
       <p>
-        Go to <Link to="/products">the list of products</Link>.
+        Go to <Link to="products">the list of products</Link>.
       </p>
       <p>
         <button onClick={navigateHandler}>Navigate</button>
